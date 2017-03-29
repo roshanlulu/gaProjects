@@ -1,9 +1,13 @@
-# Project 1 - Problem 1
+'''***********************************************************************'''
+'''***************************** PROJECT 1 *******************************'''
+'''***************************** PROBLEM 1 *******************************'''
 
+'''*************************** INCLUDE MODULES ***************************'''
 # Include import modules
 import pytest
 import string
 
+'''************************** INPUT DEFINITIONS **************************'''
 # Data provided
 input_dict = {
     'list': [1, 2, 3, 4],
@@ -16,9 +20,8 @@ input_dict = {
     'CHARACTER': 'C'
 }
 
-
-
 '''************************ FUNCTION DEFINITIONS *************************'''
+
 # Print dictionary function
 def print_dict(input_dict):
     # Print dictionary
@@ -30,6 +33,7 @@ def print_dict(input_dict):
 def iterate_dict(input_dict):
     lowercase = string.ascii_lowercase
     vowels = 'aeiou'
+    print('wrong')
     updated_dict = {}
     for key in input_dict:
         key_char = str(key)[0].lower()
@@ -42,7 +46,7 @@ def iterate_dict(input_dict):
     return updated_dict
 
 
-'''************************ MAIN *************************'''
+'''******************************** MAIN *********************************'''
 
 # Print contents of the dictionary. Modify & re-print the updated dictionary
 print ('Given Dictionary')
@@ -52,4 +56,4 @@ print ('Modified Dictionary \n')
 print_dict (iterate_dict (input_dict))
 
 
-'''************************ END OF FILE *************************'''
+'''***************************** END OF FILE *****************************'''
