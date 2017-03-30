@@ -31,17 +31,18 @@ def iterate_dict(input_dict):
     for key in input_dict:
         key_char = str(key)[0].lower()
         if key_char in vowels:
-            updated_dict.update({key : 'vowel'})
+            updated_dict.update({key: 'vowel'})
         elif key_char in lowercase:
-            updated_dict.update({key : 'consonant'})
+            updated_dict.update({key: 'consonant'})
         else:
             ''' Nothing to do '''
     return updated_dict
 
 
 # Print contents of the dictionary. Modify & re-print the updated dictionary
-print ('Given Dictionary')
+print('Given Dictionary')
 print_dict(input_dict)
-print ()
-print ('Modified Dictionary \n')
-print_dict (iterate_dict (input_dict))
+print()
+print('Modified Dictionary \n')
+print_dict(iterate_dict(input_dict))
+
