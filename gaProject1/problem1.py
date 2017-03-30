@@ -1,14 +1,8 @@
-'''***********************************************************************'''
-'''***************************** PROJECT 1 *******************************'''
-'''***************************** PROBLEM 1 *******************************'''
-
-'''*************************** INCLUDE MODULES ***************************'''
-# Include import modules
-import pytest
+# Include standard modules
 import string
 
-'''************************** INPUT DEFINITIONS **************************'''
-# Data provided
+
+# Given Data
 input_dict = {
     'list': [1, 2, 3, 4],
     'tuple': ('cat', 'dog'),
@@ -20,7 +14,6 @@ input_dict = {
     'CHARACTER': 'C'
 }
 
-'''************************ FUNCTION DEFINITIONS *************************'''
 
 # Print dictionary function
 def print_dict(input_dict):
@@ -46,14 +39,9 @@ def iterate_dict(input_dict):
     return updated_dict
 
 
-'''******************************** MAIN *********************************'''
-
 # Print contents of the dictionary. Modify & re-print the updated dictionary
 print ('Given Dictionary')
 print_dict(input_dict)
 print ()
 print ('Modified Dictionary \n')
 print_dict (iterate_dict (input_dict))
-
-
-'''***************************** END OF FILE *****************************'''

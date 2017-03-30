@@ -1,21 +1,10 @@
-'''***********************************************************************'''
-'''***************************** PROJECT 1 *******************************'''
-'''***************************** PROBLEM 9 *******************************'''
-
-'''*************************** INCLUDE MODULES ***************************'''
-
-'''************************** INPUT DEFINITIONS **************************'''
-
-'''************************ FUNCTION DEFINITIONS *************************'''
-
-'''******************************** MAIN *********************************'''
-
 # Read the csv file
 raw_file = ''
 with open('./pokedex_basic.csv', 'r') as pokefile:
     raw_file = pokefile.read()
 
-##################################### 9A ###################################
+
+''' 9A '''
 
 # Initialize a list
 poke_list9A = []
@@ -42,7 +31,8 @@ for row in raw_file.splitlines():
 # Print Pokedex list
 print(poke_list9A)
 
-##################################### 9B ###################################
+
+''' 9B '''
 
 # List comprehension equivalent of 9A
 poke_list9B = [([float(word.replace('"', '')) if word.replace('"', '').isdigit()
@@ -52,8 +42,7 @@ poke_list9B = [([float(word.replace('"', '')) if word.replace('"', '').isdigit()
                     for row in raw_file.splitlines()]
 
 
-################################## ASSERT ###################################
+'''ASSERT'''
 
 assert (poke_list9A == poke_list9B)
 
-'''***************************** END OF FILE *****************************'''

@@ -1,21 +1,14 @@
-'''***********************************************************************'''
-'''***************************** PROJECT 1 *******************************'''
-'''***************************** PROBLEM 8 *******************************'''
-
-'''*************************** INCLUDE MODULES ***************************'''
-
-'''************************** INPUT DEFINITIONS **************************'''
-
+# Given Data
 first_dict = {'A':(1,2), 'B':[1,2,3,4,4], 'C':[0,9], 1:(1,1,1), 12:None, 'D':None, 'E':12.777}
 second_dict = {'1':('a','b'), 2:{1:23.3}, 3:'four', 4:'five', 'five':['six', 'seven'], 8:'nine'}
 
-'''************************ FUNCTION DEFINITIONS *************************'''
 
 def check_kvtype(key, key_type, value, value_type):
     if type(key) is key_type and type(value) is value_type:
         return True
     else:
         return False
+
 
 def string_intlist_cleaner(dict):
     clean_dict = {}
@@ -24,7 +17,6 @@ def string_intlist_cleaner(dict):
             clean_dict.update({key: value})
             # del clean_dict[key] - Why dint del work?
     return clean_dict
-
 
 
 def int_string_cleaner(dict):
@@ -44,8 +36,4 @@ def dict_cleaner(first_dict, second_dict):
     return clean_merge_dict
 
 
-'''******************************** MAIN *********************************'''
-
 print(dict_cleaner(first_dict, second_dict))
-
-'''***************************** END OF FILE *****************************'''

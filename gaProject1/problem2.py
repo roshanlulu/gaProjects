@@ -1,13 +1,4 @@
-'''***********************************************************************'''
-'''***************************** PROJECT 1 *******************************'''
-'''***************************** PROBLEM 2 *******************************'''
 
-'''*************************** INCLUDE MODULES ***************************'''
-
-import pytest
-import string
-
-'''************************** INPUT DEFINITIONS **************************'''
 # Data provided
 test_dict = {
     'A':[1,2,3,4,5],
@@ -17,7 +8,6 @@ test_dict = {
 
 optional_remainder = [2,3,4,5]
 
-'''************************ FUNCTION DEFINITIONS *************************'''
 
 # Print dictionary function
 def print_dict(input_dict):
@@ -54,8 +44,5 @@ def modify_dict(dict_of_lists, remainder):
     return (new_dict)
 
 
-'''******************************** MAIN *********************************'''
-
 iterate_dict(test_dict, optional_remainder)
 
-'''***************************** END OF FILE *****************************'''
