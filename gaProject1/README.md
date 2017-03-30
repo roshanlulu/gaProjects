@@ -160,6 +160,77 @@
 
 ## Review Problem 8
 
-## Review Problem 9
+    Define three functions to “clean up” two dictionaries and merge them together.
+    
+    Your first function, called `string_intlist_cleaner` should:
+    
+    - Accept one argument which will be a dictionary.
+    - Iterate through the key:value pairs in the dictionary:
+    - If the key is not a string, remove the key:value pair from the dictionary.
+    - If the value is not a list, remove the key:value pair from the dictionary.
+    - Return the “cleaned” dictionary.
+    Your second function, called `int_string_cleaner` should:
+    
+    - Accept one argument which will be a dictionary.
+    - Iterate through the key:value pairs in the dictionary:
+    - If the key is not an integer, remove the key:value pair from the dictionary.
+    - If the value is not a string, remove the key:value pair from the dictionary.
+    - Return the “cleaned” dictionary.
+    - Your third function, called `dict_cleaner` should:
+    
+    Accept two arguments which will be dictionaries.
+    - Print the first dictionary.
+    - Print the second dictionary.
+    - Clean the first dictionary with `string_intlist_cleaner()` and assign to a variable.
+    - Clean the second dictionary with `int_string_cleaner()` and assign to a variable
+    - Combine the two cleaned dictionaries.
+    - Print the combined and cleaned dictionary.
+    - Return the combined and cleaned dictionary.
+
+## Review Problem 9a
+
+    Load and parse stats on Pokemon (the pokedex) from a comma separated value (.csv) file into a list of lists.
+    
+    The provided code below loads information from a comma separated value (csv) file. You need to parse this string into a more useable format. The format of the string is:
+    
+    - Rows are separated by newline characters: \n
+    - Columns are separated by commas: ,
+    - All cells in the csv are double quoted. Ex: “PokedexNumber” is the first cell of the first row.
+    
+    Using for loops, create a list of lists where each list within the overall list is a row of the csv, and each element in that list is a cell in that row. Additional criteria:
+    
+    - Remove the quotes from each cell item.
+    - Numeric column values should be converted to floats.
+    - There are some cells that are empty and have no information. For these cells put a -1 value in place.
+    
+    The first three lists in your pokedex list should look like:
+    
+    - ['PokedexNumber', 'Name', 'Type', 'Total', 'HP', 'Attack', 'Defense', 'SpecialAttack', 'SpecialDefense', 'Speed']
+    - [1.0, 'Bulbasaur', 'GrassPoison', 318.0, 45.0, 49.0, 49.0, 65.0, 65.0, 45.0]
+    - [2.0, 'Ivysaur', 'GrassPoison', 405.0, 60.0, 62.0, 63.0, 80.0, 80.0, 60.0]
+
+
+## Review Problem 9b
+    Perform the same parsing that you did with for loops in problem 9A, but using only a nested list comprehensions. A single list comprehension (with nested list comprehensions inside of it) should do all of the parsing of raw_pd, outputting the list of lists. Do not write any functions to call within the list comprehension.
+
+    The output should be exactly the same as in 9A
 
 ## Review Problem 10
+
+    Write a function that takes a tiered dictionary of dictionaries with arbitrary depth. Your function will iterate through the dictionary, printing out the contents.
+    
+    Define a function that:
+    
+    - Accepts at least one argument, the predefined dictionary.
+    - For each key:value pair, print out the key and the value.
+    - If the value is also a dictionary, do the same for that dictionary, but printing out the key:value pair with tabs equivalent to the current “depth” indicating what level we are on.
+    Note: tab in strings is written as `\t`
+    Example:
+    
+    'key1' : 'value1'
+    'key2' :
+        'key3' : 'value3'
+        'key4' : 'value4'
+        'key5' :
+            'key6': 'value6'
+    'key7' : 'value7'
