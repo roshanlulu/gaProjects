@@ -20,6 +20,7 @@ def print_lists(X, Y):
 
 
 def calc_correlation(X, Y):
+    print_lists(X, Y)
     # Find Mean and Deviation of the lists
     X_mean = numpy.mean(X)
     X_deviation = [value_x - X_mean for value_x in X]
@@ -34,11 +35,10 @@ def calc_correlation(X, Y):
     sum_XY_deviation = numpy.sum([(x_d * y_d) for (x_d, y_d) in zip(X_deviation, Y_deviation)])
     # Calculate pearson relation
     pearson_r = sum_XY_deviation / (sqrt_X_deviation_sq * sqrt_Y_deviation_sq)
-    pearson_r_using_fn = numpy.corrcoef(X, Y)
+    pearson_r_using_fn = numpy.corrcoef(X, Y)[0,1]
     # Print correlation values
     print ('Pearson Coefficient Relation: ', pearson_r)
     print ('Numpy Correlation Coefficient Relation: ', pearson_r_using_fn)
 
 
-print_lists(X, Y)
 calc_correlation(X, Y)
