@@ -13,7 +13,8 @@ true_values = [-15.5,-8.5,0.8,-3.9,4.9,12.7,10.0,16.5,5.7,13.1,10.3,12.4,-1.5,
 
 
 def calc_rmse(true_values, predictions):
-    # Two ways of calculating error are given below - 1. Converting given lists to arrays 2. Using zip on the given lists
+    # Two ways of calculating error are given below -
+    # 1. Converting given lists to arrays (commented code) 2. Using zip on the given lists (used code)
     # errors = [numpy.array(predictions) - numpy.array(true_values)]
     errors = [value_predicted - value_observed  for (value_predicted, value_observed) in zip(predictions, true_values)]
     sq_errors =  [ error ** 2 for error in errors]
