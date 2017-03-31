@@ -1,30 +1,28 @@
 # Function to calculate Mean
-def calc_mean(i, numbers):
+def calc_mean(numbers):
     sum = 0
-    length = len(numbers)
     for num in numbers:
         sum += num
     mean_of_num = sum / len(numbers)
-    return mean_of_num
+    return round(mean_of_num,2)
 
 
 # Function to calculate Median
-def calc_median(i, numbers):
+def calc_median(numbers):
     numbers.sort()
-    median_of_num = 0
     length = len(numbers)
     if length % 2 == 0:
-        median_of_num = numbers[(int((length - 1) / 2) + int(length / 2))]
+        median_of_num = calc_mean([numbers[int((length-1)/2)], numbers[int(length/2)]])
     else:
-        median_of_num = numbers[int((length -1) /2)]
+        median_of_num = numbers[int((length-1) /2)]
     return median_of_num
 
 
 # Main Function
 def calc_stats(i, numbers):
     print ('Iteration i = ', i)
-    print ('Mean: ', calc_mean(i, numbers))
-    print ('Median: ', calc_median(i, numbers))
+    print ('\tMean: ', calc_mean(numbers))
+    print ('\tMedian: ', calc_median(numbers))
 
 
 # Provided for loop for i and numbers:
