@@ -3,11 +3,9 @@ list1 = [1.5,3.5,5.5,7.5]
 list2 = [0,4,8,12]
 
 
-def print_list(list1, list2):
-    print(list1, list2)
-
-
+# Main function
 def iterate_list(list1, list2):
+    print("List 1: ", list1, " List 2: ", list2)
     index_outer_loop = 1
     while(True):
         exit_outer_loop = False
