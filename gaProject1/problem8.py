@@ -10,15 +10,16 @@ def check_kvtype(key, key_type, value, value_type):
         return False
 
 
+# Usage of for loops
 def string_intlist_cleaner(dict):
     clean_dict = {}
     for key, value in dict.items():
         if check_kvtype(key, str, value, list):
             clean_dict.update({key: value})
-            # del clean_dict[key] - Why dint del work?
     return clean_dict
 
 
+# Usage of list comprehension
 def int_string_cleaner(dict):
     clean_dict = {}
     [clean_dict.update({key: value})
@@ -28,12 +29,13 @@ def int_string_cleaner(dict):
 
 
 def dict_cleaner(first_dict, second_dict):
-    print ('Dictionary 1: ', first_dict)
+    print('Dictionary 1: ', first_dict)
     print('Dictionary 2: ', second_dict)
     clean_merge_dict = {}
     clean_merge_dict.update(string_intlist_cleaner(first_dict))
     clean_merge_dict.update(int_string_cleaner(second_dict))
+    print(clean_merge_dict)
     return clean_merge_dict
 
 
-print(dict_cleaner(first_dict, second_dict))
+dict_cleaner(first_dict, second_dict)
