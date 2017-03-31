@@ -41,6 +41,9 @@ poke_list9B = [([float(word.replace('"', '')) if word.replace('"', '').isdigit()
                     for word in row.split(',')])
                     for row in raw_file.splitlines()]
 
+# Print Pokedex list
+print(poke_list9B)
+
 
 '''ASSERT'''
 
