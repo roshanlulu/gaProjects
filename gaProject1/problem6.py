@@ -40,12 +40,12 @@ def calc_spearmans_rho(X, Y):
     # Get Std deviation of each rank lists
     X_std_dev = get_std_deviation(X_rank)
     Y_std_dev = get_std_deviation(Y_rank)
-    # Evaluate SPCC
+    # Evaluate SPCC using formulae
     XY_spearman = XY_rank_cov / (X_std_dev * Y_std_dev)
     # Evaluate SPCC using scipy library
     XY_scipy_spearman = stats.spearmanr(X, Y)
     print ('SPCC = ', XY_spearman)
-    print('SPCC Scipy = ', XY_scipy_spearman)
+    print('SPCC (Scipy) = ', XY_scipy_spearman)
 
 
 calc_spearmans_rho(X, Y)
