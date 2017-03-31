@@ -1,4 +1,3 @@
-
 # Data provided
 test_dict = {
     'A':[1,2,3,4,5],
@@ -16,18 +15,6 @@ def print_dict(input_dict):
         print(key, ' : ', value)
 
 
-# This function sets the reminder list and calls the iterate dictionary function
-def iterate_dict(dict_of_lists, remainder = []):
-    # Append 2 if no valid list is passed
-    if len(remainder) == 0:
-        remainder.append(2)
-    # Print Dictionary and list
-    print_dict(dict_of_lists)
-    print(remainder)
-    # Iterate through the dictionary
-    modify_dict(dict_of_lists, remainder)
-
-
 # Function that modifies the dictionary contents
 def modify_dict(dict_of_lists, remainder):
     new_dict = {}
@@ -42,9 +29,24 @@ def modify_dict(dict_of_lists, remainder):
                 list_of_rem.append(val)
             nested_dict[value_item] = list_of_rem
         new_dict[key] = [nested_dict]
-    print_dict(new_dict)
     return new_dict
 
 
-iterate_dict(test_dict, optional_remainder)
+# This function sets the reminder list and calls the iterate dictionary function
+def iterate_dict(dict_of_lists, remainder=[]):
+    # Append 2 if no valid list is passed
+    if len(remainder) == 0:
+        remainder.append(2)
+    # Print Dictionary and list
+    print_dict(dict_of_lists)
+    print("Remainder List: ", remainder)
+    # Iterate through the dictionary
+    updated_dict = modify_dict(dict_of_lists, remainder)
+    print_dict(updated_dict)
+    return updated_dict
 
+
+# Call the main function
+iterate_dict(test_dict, optional_remainder)
+print()
+iterate_dict(test_dict)
