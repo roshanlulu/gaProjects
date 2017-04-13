@@ -1,5 +1,4 @@
 .DS_Store
-*.ipynb
 *.cache
 */.idea/*
 */__pycache__
