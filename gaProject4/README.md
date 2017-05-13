@@ -14,32 +14,32 @@
         
         - valid_jobpost_cleaned_data.csv - CSV file with the cleaned data. It contains the job posts with a valid salary amount. This will be used for cases were the salary needs ot be predicted.
         
-        - valid_jobpost_text_cleaned_data.csv - CSV file is exactyy same as valid_jobpost_cleaned_data.csv with additional features obtained after vectorizing the Job description for valid salaries.
+        - valid_jobpost_text_cleaned_data.csv - CSV file is exactly same as valid_jobpost_cleaned_data.csv with additional features obtained after vectorizing the Job description for valid salaries.
         
 #### 1. project4-roshan-01-scraping [ Python NB ]
     - The Job postings i.e. the database/dataset required to answer the questions for this project is obtained in this notebook.
     In short, the web scraping is implemented in this notebook.
 ##### DATA DICTIONARY - Search_Results_Final.csv
-    Job_Desc
-    Job_Loc
-    Page_Num
-    url_link
-    Job_Posts
+    Job_Desc - Search String given in seek
+    Job_Loc - Job Location searched
+    Page_Num - Page num of the search results
+    url_link - url link of the search result page
+    Job_Posts - Job posts links obtained from each url_linl
     
 ##### DATA DICTIONARY - Job_Posts_Final.csv
-    keyword
-    pagenum
-    title
-    region
-    location
-    salary
-    worktype
-    adv
-    classif
-    jd1
-    jd2
-    jd3
-    url
+    keyword - Search key
+    pagenum - Page num of the job post in the search result page
+    title - Job Description title
+    region - Job posting region in the city(CBD/ Inner West etc)
+    location - Job posting location(Sydney/Melbourne)
+    salary - Stated salary
+    worktype - Stated work type(full time/part time/contract)
+    adv - Job Advertiser details
+    classif - Job Industry classification
+    jd1 - Job description
+    jd2 - Job description
+    jd3 - Job description
+    url - Job posting url
 
 #### 2. project-4-roshan-02-clean-eda [ Python NB ]
     - The Data cleaning and EDA of the scraped data is done in this notebook
@@ -58,9 +58,9 @@
         7 - Head/Director/
 
     Location_Code
-        Sydney       1679
-        Melbourne     851
-        Brisbane      300
+        0 - Sydney
+        1 - Melbourne
+        2 - Brisbane
 
     Region_Code
         Sydney
@@ -116,10 +116,14 @@
         4 - Business-Intelligence
 
     Salary
-        Per annum
+        Salary per annum with
 
     Job Description
-        Text
+        Full Job description text
         
 #### 3. project-4-roshan-03-qn1-qn2 [ Python NB ]
-    - Answers to the Problem statement have been provided in this notebook as a result of iterating through Modelling techniques and Validating the results.
+    - Answers to the Problem statement have been provided in this notebook 
+    - Machine learning Regression/Classification Modelling and Validation techniques have been used.
+
+#### 4. Summary_Report.md
+    - Report to the Principal detailing the project analysis and findings.
