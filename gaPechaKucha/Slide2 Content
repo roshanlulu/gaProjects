@@ -1,0 +1,95 @@
+Machine translations have come a long way from the 1950s 
+An experiment done back then took an english biblical text 'The spirit is willing and the flesh is weak" translated to russian and then back to english and it became " The vodka is good but the meat is rotten"
+What went wrong here? The Text translation went well but the context was completely missing.
+This reaffirmed that machines can understand structured text, But when it comes to unstructured human language + all the emotions, it fails terribly.
+This drawback is what NLP addresses.
+and Text analytics plays an important role in this. 
+Given a piece of text, segmenting the sentence, tokenizing the words and tagging parts of speech are few widely used methods.
+Further we will see some interesting applications that use them and more.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Parts of speech tagging is one handy tool to understand context.
+Take 2 sentences for eg:
+I like running - here it is a verb
+He runs like the wind - preposition.
+NLP uses part of speech tagging technique to identify this.
+A relevant use case for this is Siri.
+
+The part-of-speech annotation in the above sentences are as follows:
+
+PRP I VBP like NN running 
+PRP He VBZ runs IN like DT the NN wind
+
+In the first sentence, the word like is tagged as VBP (verb non-third person, singular, present tense) while the second sentence, it is tagged as IN (preposition). 
+On the average, an English language word has at least two POS tags associated with it. This ambiguity makes the task quite challenging.
+
+
+
+
+
+Places where it is there and we dont know it
+- Machine translation, Automatic Translation, Spam detection, Sentiment Analysis, Conversational agent
+
+One of the key challenges in POS tagging is the tokenization of sentences. Tokenization is the process of breaking a sentence into words. While one might think this is pretty straightforward for a language such as English, where words are usually separated by whitespaces, this is not always true, especially with tweets. For instance, consider the following sentence:
+
+https://content.pivotal.io/blog/twitter-nlp-example-how-to-scale-part-of-speech-tagging-with-mpp-part-1
+
+
+
+Tokenization example:
+
+
+
+POS example:
+I like running
+He runs like the wind
+The part-of-speech annotation in the above sentences are as follows:
+
+PRP I VBP like NN running 
+PRP He VBZ runs IN like DT the NN wind
+
+In the first sentence, the word like is tagged as VBP (verb non-third person, singular, present tense) while the second sentence, it is tagged as IN (preposition). 
+On the average, an English language word has at least two POS tags associated with it. This ambiguity makes the task quite challenging.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Natural Language Processing deals with the problems of making a machine "understand" the structure and the meaning of natural language as used by humans; translating it into a machine representation format; processing it (summarization, syntactic parsing, etc.); and generating natural language back to the user. In order to understand the meaning of natural language, machines have to learn how do it. Hence, Machine Learning is used within NLP.
+
